@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Form</title>
+	
+</head>
+<style>
+    body {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	background-color: #f2f2f2;
+}
+
+.login-container {
+	width: 500px;
+	margin: 50px auto;
+	background-color: #fff;
+	padding: 20px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+.login-container:hover{
+	background-color: blueviolet;
+	text-transform: lowercase;
+	text-decoration-color: bisque;
+	text-decoration-skip-ink:all;
+}
+
+h1 {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+form label {
+	display: block;
+	margin-bottom: 8px;
+}
+
+form input {
+	width: 95%;
+	padding: 12px;
+	margin-bottom: 20px;
+	border: none;
+	border-radius: 5px;
+	background-color: #f5efef;
+	font-size: 16px;
+}
+
+form button {
+	display: block;
+	width: 100%;
+	padding: 12px;
+	border: none;
+	border-radius: 5px;
+	background-color: #160715;
+	color: #fff;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+form button:hover {
+	background-color: hsl(79, 85%, 34%);
+	font-size: large;
+}
+
+</style>
+<body>
+	<div class="login-container">
+		<h1 class="a">Login Form</h1>
+		<form>
+			<label for="username">Username:</label>
+			<input type="text" id="username" name="username" placeholder="Enter your username">
+			<label for="password">Password:</label>
+			<input type="password" id="password" name="password" placeholder="Enter your password">
+			<label for="password">Confirm Password:</label>
+			<input type="password" id="Confirm_password" name="Confirm_password" placeholder="Enter confirm password">
+			<button type="submit" onclick="login()">Login</button>
+		</form>
+	</div>
+	<script src="script.js">
+          function login() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var password = document.getElementById("onfirm_password").value;
+  
+            if (username == "admin" && password == "password" && Confirm_password == "Confirm_password") {
+            alert("Login successful");
+            window.location.href = "dashboard.html"; // Redirect to dashboard page
+            }
+              else {
+                    alert("Invalid username or password");
+                   }
+}
+
+    </script>
+</body>
+</html>
